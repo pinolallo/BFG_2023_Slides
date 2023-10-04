@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Silvestro Di Pietro">
+  <title>Data structures</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+      #header-left {
+          position: absolute;
+          top: 2%;
+          left: 2%;
+      }
+      #header-right {
+          position: absolute;
+          top: 2%;
+          right: 2%;
+      }
+      #footer-left {
+          position: absolute;
+          bottom: 2%;
+          left: 2%;
+           left: 2%;
+      }
+  </style>
+  <div id="hidden" >
+      <div id="header">
+          <div id="header-left" class="alert alert-info" style="font-family: Arial, Helvetica, sans-serif;"><strong  >06-Data Structures </strong><br /><em>Silvestro Di Pietro</em></div>
+          <div id="header-right" ><img align="middle" src="images/logounimi.png"><img align="middle" src="images/logoIfom.png"></div>
+          <div id="footer-left">
+          	<em class="badge badge-info" style="font-family: Arial, Helvetica, sans-serif;">
+          		Bioinformatic and Functional Genomics A.Y 2022-2023
+          	</em>
+          </div>
+      </div>
+  </div>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Data structures</h1>
+  <p class="author">Silvestro Di Pietro</p>
+  <p class="date">14/04/2023</p>
+</section>
+
+<section>
+<section id="definition" class="title-slide slide level1">
+<h1>Definition</h1>
+
+</section>
+<section id="data-structures" class="slide level2">
+<h2>Data Structures</h2>
+<p><img data-src="images/DataStructure.png" width="850" /></p>
+<p>A data structure is a storage that is used to store and organize
+data. It is a way of arranging data on a computer so that it can be
+accessed and updated efficiently.</p>
+</section>
+<section id="array" class="slide level2">
+<h2>Array</h2>
+<p><img data-src="images/array.png" width="750" /></p>
+<p>An array is a collection of items stored at
+<code>contiguous memory locations</code>. The idea is to store multiple
+items of the same type together.</p>
+</section>
+<section id="linked-lists" class="slide level2">
+<h2>Linked Lists</h2>
+<p><img data-src="images/linkedList.png" width="750" /></p>
+<p>A linked list is a linear data structure, in which the elements are
+<code>not stored at contiguous memory</code> locations.</p>
+</section>
+<section id="stack" class="slide level2">
+<h2>Stack</h2>
+<p><img data-src="images/stack.png" width="350" /></p>
+<p>Stack is a linear data structure that follows a particular order in
+which the operations are performed. The order may be LIFO(Last In First
+Out) or FILO(First In Last Out).</p>
+</section>
+<section id="queue" class="slide level2">
+<h2>Queue</h2>
+<p><img data-src="images/queue.png" width="350" /></p>
+<p>A Queue is defined as a linear data structure that is open at both
+ends and the operations are performed in First In First Out (FIFO)
+order.</p>
+</section>
+<section id="binary-tree" class="slide level2">
+<h2>Binary Tree</h2>
+<p><img data-src="images/binarytree.png" width="400" /></p>
+<p>Binary Tree is defined as a tree data structure where each node has
+at most 2 children. Since each element in a binary tree can have only 2
+children, we typically name them the left and right child.</p>
+</section>
+<section id="binary-search-tree" class="slide level2">
+<h2>Binary Search Tree</h2>
+<p><img data-src="images/binarySearchTree.png" width="300" /></p>
+<ul>
+<li>The <code>left subtree</code> of a node contains only nodes with
+keys lesser than the node’s key.</li>
+<li>The <code>right subtree</code> of a node contains only nodes with
+keys greater than the node’s key.</li>
+<li>The <code>left and right</code> subtree each must also be a binary
+search tree.</li>
+</ul>
+</section>
+<section id="heap-min-and-max" class="slide level2">
+<h2>Heap Min and Max</h2>
+<p><img data-src="images/heap.png" width="500" /></p>
+<p>A Heap is a special Tree-based Data Structure in which the tree is a
+complete binary tree.</p>
+</section>
+<section id="hash-table" class="slide level2">
+<h2>Hash Table</h2>
+<p><img data-src="images/hashTable.png" width="900" /></p>
+<p>Hashing is a technique or process of mapping keys, and values into
+the hash table by using a hash function. It is done for faster access to
+elements.</p>
+</section>
+<section id="graph" class="slide level2">
+<h2>Graph</h2>
+<p><img data-src="images/graph.png" width="900" /></p>
+<p>A Graph is a non-linear data structure consisting of vertices and
+edges.</p>
+</section>
+<section id="matrix" class="slide level2">
+<h2>Matrix</h2>
+<p><img data-src="images/matrix.png" width="200" /></p>
+<p>A matrix represents a collection of numbers arranged in an order of
+rows and columns. It is necessary to enclose the elements of a matrix in
+parentheses or brackets.</p>
+</section></section>
+<section>
+<section id="binary-tree-1" class="title-slide slide level1">
+<h1>Binary Tree</h1>
+
+</section>
+<section id="tree-definitions" class="slide level2">
+<h2>Tree Definitions</h2>
+<p><img data-src="images/treeDef.png" width="900" /></p>
+</section>
+<section id="some-usage" class="slide level2">
+<h2>Some Usage</h2>
+<ul>
+<li>Search Algoritms (<strong>O</strong>(logN))
+<code>time complexity</code></li>
+<li>Sorting algorithms (search Binary Tree and Heap Sort)</li>
+<li>Database systems (MPTT)</li>
+<li>File systems</li>
+<li>Compression algorithms (Huffman/zip)</li>
+<li>Decision trees (Machine learning)</li>
+</ul>
+</section>
+<section id="tree-traversals" class="slide level2">
+<h2>Tree Traversals</h2>
+<p>Traversing mean visit each node of the tree, there are three main
+method to do this with a Time Complexity of <strong>O</strong>(n)</p>
+<p><img data-src="images/treeTraversal.png" width="750" /></p>
+</section>
+<section id="inorder-traversal" class="slide level2">
+<h2>Inorder traversal</h2>
+<ol type="1">
+<li>Traverse the left subtree recursively.</li>
+<li>Visit the root node.<br />
+</li>
+<li>Traverse the right subtree recursively.</li>
+</ol>
+<p><img data-src="images/Sorted_binary_tree_inorder.svg"
+width="350" /></p>
+</section>
+<section id="preorder-traversal" class="slide level2">
+<h2>Preorder traversal</h2>
+<ol type="1">
+<li>Visit the root.</li>
+<li>Traverse the left subtree, recursively preorder left-subtree</li>
+<li>Traverse the right subtree, recursively preorder right-subtree.</li>
+</ol>
+<p><img data-src="images/Sorted_binary_tree_preorder.svg"
+width="300" /></p>
+</section>
+<section id="postorder-traversal" class="slide level2">
+<h2>PostOrder traversal</h2>
+<ol type="1">
+<li>Traverse the left subtree, recursively call
+postorder(left-subtree)</li>
+<li>Traverse the right subtree, recursively call
+postorder(right-subtree)</li>
+<li>Visit the root.</li>
+</ol>
+<p><img data-src="images/Sorted_binary_tree_postorder.svg"
+width="300" /></p>
+</section>
+<section id="mptt-example" class="slide level2">
+<h2>MPTT example</h2>
+<p><img data-src="images/MPTT.png" width="650" /></p>
+</section>
+<section id="binary-search-tree-1" class="slide level2">
+<h2>Binary search tree</h2>
+<div class="fragment">
+<p><img
+data-src="images/optimal-binary-search-tree-from-sorted-array.gif"
+width="550" /></p>
+</div>
+</section>
+<section id="insertion-on-tree" class="slide level2">
+<h2>Insertion on tree</h2>
+<div class="fragment">
+<p><img data-src="images/binary-search-tree-insertion-animation.gif"
+width="550" /></p>
+</div>
+</section>
+<section id="search-on-tree" class="slide level2">
+<h2>Search on tree</h2>
+<div class="fragment">
+<p><img data-src="images/binary-search-tree-sorted-array-animation.gif"
+width="550" /></p>
+</div>
+</section></section>
+<section>
+<section id="graphs" class="title-slide slide level1">
+<h1>Graphs</h1>
+
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p><img data-src="images/Graph2.png" width="550" /></p>
+</section>
+<section id="traversing-breadth-first-search" class="slide level2">
+<h2>Traversing Breadth First search</h2>
+<p>Is an algorithm for traversing a tree data structure for a node. It
+starts at the tree root and explores all nodes at the present depth
+prior to moving on to the nodes at the next depth level. Extra memory,
+usually a <code>queue</code>, is needed to keep track of the child nodes
+that were encountered but not yet explored.</p>
+</section>
+<section id="bfs-example" class="slide level2">
+<h2>BFS example</h2>
+<p><img data-src="images/BFSAlgo.gif" width="1000" /></p>
+</section>
+<section id="traversing-deep-first-search" class="slide level2">
+<h2>Traversing Deep First Search</h2>
+<p>Depth-first search is an algorithm for traversing or searching tree
+or graph data structures. The algorithm starts at the root node
+(selecting some arbitrary node as the root node in the case of a graph)
+and explores as far as possible along each branch before backtracking.
+Extra memory, usually a <code>stack</code>, is needed to keep track of
+the child nodes that were encountered but not yet explored.</p>
+</section>
+<section id="the-maze" class="slide level2">
+<h2>The Maze</h2>
+<p>Creation using <code>prism algorithm</code>, rapresentation as
+graph</p>
+<p><img data-src="images/mazeCreation2.gif" width="400" /></p>
+</section>
+<section id="the-maze-dictionary" class="slide level2">
+<h2>The Maze Dictionary</h2>
+<p>To run the algos we need to fill a dictionary with vertex and
+edges</p>
+<p><img data-src="images/GraphDictionary2.gif" width="700" /></p>
+</section>
+<section id="maze-bfs" class="slide level2">
+<h2>Maze BFS</h2>
+<p><img data-src="images/maze_Solved.gif" width="600" /></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
