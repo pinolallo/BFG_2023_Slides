@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Silvestro Di Pietro">
+  <title>What is information</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+      #header-left {
+          position: absolute;
+          top: 2%;
+          left: 2%;
+      }
+      #header-right {
+          position: absolute;
+          top: 2%;
+          right: 2%;
+      }
+      #footer-left {
+          position: absolute;
+          bottom: 2%;
+          left: 2%;
+           left: 2%;
+      }
+  </style>
+  <div id="hidden" >
+      <div id="header">
+          <div id="header-left" class="alert alert-info" style="font-family: Arial, Helvetica, sans-serif;"><strong  >02-What Is Information </strong><br /><em>Silvestro Di Pietro</em></div>
+          <div id="header-right" ><img align="middle" src="images/logounimi.png"><img align="middle" src="images/logoIfom.png"></div>
+          <div id="footer-left">
+          	<em class="badge badge-info" style="font-family: Arial, Helvetica, sans-serif;">
+          		Bioinformatic and Functional Genomics A.Y 2022-2023
+          	</em>
+          </div>
+      </div>
+  </div>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">What is information</h1>
+  <p class="author">Silvestro Di Pietro</p>
+  <p class="date">16/03/2023</p>
+</section>
+
+<section>
+<section id="definition" class="title-slide slide level1">
+<h1>Definition</h1>
+
+</section>
+<section id="information" class="slide level2">
+<h2>Information</h2>
+<p>Any process that is not completely random, and any observable pattern
+in any medium can be said to convey some amount of information.</p>
+</section></section>
+<section>
+<section id="some-science" class="title-slide slide level1">
+<h1>Some Science</h1>
+
+</section>
+<section id="shannon" class="slide level2">
+<h2>Shannon</h2>
+<p><img data-src="images/Claude_shannon.jpeg" width="100" /></p>
+<p>For Claude Shannon (1948) the information consists</p>
+<ol type="1">
+<li>the data <code>what</code></li>
+<li>the channel <code>how</code></li>
+<li>the receiver <code>who</code></li>
+</ol>
+</section>
+<section id="the-surprise" class="slide level2">
+<h2>The Surprise</h2>
+<p>The main idea about the Information theory is the “information value”
+that depends from the novelty or how much the data is surprising.
+Shannon introduce the <code>entropy</code> (as is in thermodinamics)
+formulating the theory.</p>
+</section>
+<section id="enalotto" class="slide level2">
+<h2>Enalotto</h2>
+<p><img data-src="images/Logo_SuperEnalotto.png" width="300" /></p>
+<p>Data on the first sequence has very little meaning, but the value of
+the second sequence?</p>
+<ul>
+<li>just numbers <strong>58 45 22 51 57 78</strong></li>
+<li>winning numbers <strong>23 42 46 54 58 79</strong></li>
+</ul>
+<p><em>Concorso Nº30 del 11 March 2023</em></p>
+</section>
+<section id="a-little-demon-1867" class="slide level2">
+<h2>A little demon (1867)</h2>
+<p><img data-src="images/Maxwel_demon.jpeg" width="300" /></p>
+<p>Maxwell elaborate this thought experiment in order to confutate his
+2nd thermodynamics law trying to avoid entropy with a
+<code>demon</code>.</p>
+</section>
+<section id="thermo-information" class="slide level2">
+<h2>Thermo information</h2>
+<p><img data-src="images/Leo_Szilard.png" width="200" /></p>
+<p>62 year later <strong>Leo Szilard</strong> stated that acquiring
+information require energy increasing entropy, <strong>Léon
+Brillouin</strong> stated that the energy of this action is needed when
+the demon erase the information.</p>
+</section>
+<section id="quantum-wave" class="slide level2">
+<h2>Quantum wave</h2>
+<p><img data-src="images/wave_function_collapse.gif" width="600" /></p>
+<p>Acquiring the information cause the collapsing of the wave
+function.</p>
+</section>
+<section id="information-need-energy" class="slide level2">
+<h2>Information need energy</h2>
+<ul>
+<li>the information process generate entropy and need energy</li>
+<li>the information is a physical fact.</li>
+</ul>
+</section></section>
+<section>
+<section id="binary-numbers" class="title-slide slide level1">
+<h1>Binary numbers</h1>
+
+</section>
+<section id="minimal-information" class="slide level2">
+<h2>Minimal Information</h2>
+<p><img
+data-src="images/Ching_hexagrams_owned_by_Gottfried_Wilhelm_Leibniz,_1701.jpeg"
+width="200" /></p>
+<p>Chings suggested to Gottfried Wilhelm Leibniz the numeration in base
+2.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ching symbol</th>
+<th style="text-align: center;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">- -</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="base-2" class="slide level2">
+<h2>Base 2</h2>
+<p><img data-src="images/binary6.jpeg" width="200" /></p>
+<div class="fragment">
+<p>Binary is the minimal way to code information, and for this reason
+are widely used symbols in informatics.</p>
+<p><code>https://www.leibniz-translations.com/binary.htm</code></p>
+</div>
+</section>
+<section id="aritmetic" class="slide level2">
+<h2>Aritmetic</h2>
+<p><img data-src="images/BinaryAritmetic.jpeg" width="400" /></p>
+<div class="fragment">
+<p>Binary numbers are just numbers</p>
+</div>
+</section>
+<section id="base-2-exponential" class="slide level2">
+<h2>Base 2 exponential</h2>
+<p>1 kb =2^10 <img data-src="images/Bytes.png" width="400" /></p>
+</section></section>
+<section>
+<section id="hexadecimals" class="title-slide slide level1">
+<h1>Hexadecimals</h1>
+
+</section>
+<section id="base-16-exponential" class="slide level2">
+<h2>Base 16 exponential</h2>
+<p>Hexadecimals has 16 symbols</p>
+<p>0 1 2 3 4 5 6 7 8 9 A B C D F</p>
+<p><code>FFFF</code> = <code>2^16</code> =
+<code>1111111111111111</code></p>
+</section>
+<section id="hex-on-unix" class="slide level2">
+<h2>HEX On UNIX</h2>
+<p>Unix (and related) shells, AT&amp;T assembly language and likewise
+the C programming language (and its syntactic descendants such as C++,
+C#, Go, D, Java, JavaScript, Python and Windows PowerShell) use the
+prefix 0x for numeric constants represented in hex: 0x5A3.</p>
+</section>
+<section id="hex-on-uris" class="slide level2">
+<h2>HEX On URIs</h2>
+<p>in URIs (including URLs), character codes are written as hexadecimal
+pairs prefixed with
+<code>%: http://www.example.com/name%20with%20spaces where %20</code> is
+the code for the space (blank) character,
+<code>ASCII code point 20 in hex</code>, 32 in decimal.</p>
+</section>
+<section id="hex-on-xml" class="slide level2">
+<h2>HEX On XML</h2>
+<p>In XML and XHTML, characters can be expressed as hexadecimal numeric
+character references using the notation &amp;#xcode;, for instance
+<code>&amp;#x2019</code>; represents the character U+2019 (the right
+single quotation mark). If there is no x the number is decimal (thus
+<code>&amp;#8217;</code> is the same character)</p>
+</section>
+<section id="on-css-html" class="slide level2">
+<h2>On CSS (html)</h2>
+<p>Color references in HTML, CSS and X Window can be expressed with six
+hexadecimal digits (two each for the red, green and blue components, in
+that order) prefixed with #: white, for example, is represented as
+<code>#FFFFFF</code>.[5] CSS also allows 3-hexdigit abbreviations with
+one hexdigit per component: <code>#FA3</code> abbreviates
+<code>#FFAA33</code> (a golden orange: ).</p>
+</section></section>
+<section>
+<section id="storage" class="title-slide slide level1">
+<h1>storage</h1>
+
+</section>
+<section id="r-a-m" class="slide level2">
+<h2>R A M</h2>
+<figure>
+<img data-src="images/800px-KL_CoreMemory.jpeg" width="300"
+alt="1024 bit iron ram" />
+<figcaption aria-hidden="true"><em>1024 bit iron ram</em></figcaption>
+</figure>
+<div class="fragment">
+<p>Random Access Memory, Usually we consider this <em>volatile
+memory</em> that need energy to keep the information stored</p>
+</div>
+</section>
+<section id="r-o-m" class="slide level2">
+<h2>R O M</h2>
+<figure>
+<img data-src="images/LOLmemory.jpeg" width="300" alt="ferrite ROM" />
+<figcaption aria-hidden="true"><em>ferrite ROM</em></figcaption>
+</figure>
+<div class="fragment">
+<p>Read Only Memory: is a memory that can just be read and will store
+permanently the information without need of energy</p>
+</div>
+</section>
+<section id="lol-rom" class="slide level2">
+<h2>LOL ROM</h2>
+<p><img data-src="images/LOLmemory.jpeg" width="300" /></p>
+<p>Software written by MIT programmers was woven bit by bit into core
+rope memory by female workers in factories. Some programmers nicknamed
+the finished product LOL memory, for Little Old Lady memory.</p>
+</section>
+<section id="hard-drive" class="slide level2">
+<h2>Hard Drive</h2>
+<p><img data-src="images/hard-drive.jpeg" width="300" /></p>
+<p>A magnetic disk partitioned with sectors and block of data with a
+movable head reading and writing capable.</p>
+</section>
+<section id="flash-memory" class="slide level2">
+<h2>Flash Memory</h2>
+<p><img data-src="images/USB_flash_drive.jpeg" width="300" /></p>
+<p>Flash memory is an electronic non-volatile computer memory storage
+medium that can be electrically erased and reprogrammed: is fast and
+cheap (in your phone the ram is this kind of memory)</p>
+</section>
+<section id="memory-hiearchy" class="slide level2">
+<h2>Memory hiearchy</h2>
+<p><img data-src="images/ComputerStorage.png" width="700" /></p>
+</section></section>
+<section>
+<section id="a-computer" class="title-slide slide level1">
+<h1>A Computer</h1>
+
+</section>
+<section id="cpu" class="slide level2">
+<h2>CPU</h2>
+<p><img data-src="images/CPU.png" width="700" /></p>
+</section>
+<section id="computerschema" class="slide level2">
+<h2>ComputerSchema</h2>
+<p><img data-src="images/ComputerSchema.png" width="700" /></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
