@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Silvestro Di Pietro">
+  <title>Network A</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+      #header-left {
+          position: absolute;
+          top: 2%;
+          left: 2%;
+      }
+      #header-right {
+          position: absolute;
+          top: 2%;
+          right: 2%;
+      }
+      #footer-left {
+          position: absolute;
+          bottom: 2%;
+          left: 2%;
+           left: 2%;
+      }
+  </style>
+  <div id="hidden" >
+      <div id="header">
+          <div id="header-left" class="alert alert-info" style="font-family: Arial, Helvetica, sans-serif;"><strong  >08-Network_A </strong><br /><em>Silvestro Di Pietro</em></div>
+          <div id="header-right" ><img align="middle" src="images/logounimi.png"><img align="middle" src="images/logoIfom.png"></div>
+          <div id="footer-left">
+          	<em class="badge badge-info" style="font-family: Arial, Helvetica, sans-serif;">
+          		Bioinformatic and Functional Genomics A.Y 2022-2023
+          	</em>
+          </div>
+      </div>
+  </div>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Network A</h1>
+  <p class="author">Silvestro Di Pietro</p>
+  <p class="date">27/04/2023</p>
+</section>
+
+<section>
+<section id="definition" class="title-slide slide level1">
+<h1>Definition</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>We consider a network as a graph of connected entities created to
+allow exchange informations through nodes</p>
+</section>
+<section id="unicast-broadcast-multicast" class="slide level2">
+<h2>Unicast, Broadcast Multicast</h2>
+<p>Cast is the packet data stream. 1. <code>Unicast</code> will send
+data to an unique address, recipient 2. <code>Broadcast</code> send data
+to all recipients of a network 3. <code>Multicast</code> send data to a
+group of recipients</p>
+</section>
+<section id="network-topology" class="slide level2">
+<h2>Network Topology</h2>
+<p>Network Topology refers to the physical and logical arrangement of
+devices on a network. There are several different types of Network
+Topologies, including Bus, Star, Ring, Mesh, and Tree.</p>
+</section>
+<section id="bus-topology" class="slide level2">
+<h2>Bus Topology</h2>
+<p><img data-src="images/busTopology.png" width="500" /></p>
+<p>This type of topology is easy to set up and manage, but it can be
+vulnerable to failure if the backbone cable or bus is damaged</p>
+</section>
+<section id="star-topology" class="slide level2">
+<h2>Star Topology</h2>
+<p><img data-src="images/starTopology.png" width="500" /></p>
+<p>This type of topology is more robust than the Bus topology, but it
+can be more expensive to set up and manage.</p>
+</section>
+<section id="star-topology-1" class="slide level2">
+<h2>Star Topology</h2>
+<p><img data-src="images/meshTopology.png" width="500" /></p>
+<p>This type of topology is highly reliable and robust, but it can be
+expensive to set up and manage.</p>
+</section>
+<section id="tree-topology" class="slide level2">
+<h2>Tree Topology</h2>
+<p><img data-src="images/treeTopology.png" width="500" /></p>
+<p>This type of topology is easy to set up and manage, but it can be
+affected by a single device failure.</p>
+</section>
+<section id="types-of-networks" class="slide level2">
+<h2>Types of Networks</h2>
+<p>Main Types are</p>
+<ol type="1">
+<li><code>LAN</code> (local Area Network)</li>
+<li><code>MAN</code> (Metropolitan Area Network)</li>
+<li><code>WAN</code> (Wide Area Network) Other networks:
+<code>PAN</code> (Personal Area Network), <code>SAN</code> (Storage Area
+Network),<code>EPN</code> (Enterprise Private Network), <code>VPN</code>
+(Virtual Private Network)</li>
+</ol>
+</section>
+<section id="pan" class="slide level2">
+<h2>PAN</h2>
+<p>a personal area network having an interconnection of personal
+technology devices to communicate over a short distance. It covers only
+less than 10 meters. Usually is a <code>bluethoot</code> network</p>
+</section>
+<section id="lan" class="slide level2">
+<h2>LAN</h2>
+<p>Connects network devices in such a way that personal computers and
+workstations can share data, tools, and programs. The group of computers
+and devices are connected together by a switch, or stack of switches,
+using a private addressing scheme as defined by the TCP/IP protocol.</p>
+</section>
+<section id="man" class="slide level2">
+<h2>MAN</h2>
+<p>Covers a larger area than that covered by a LAN and a smaller area as
+compared to WAN. MAN has a range of 5-50km. It connects two or more
+computers that are apart but reside in the same or different cities. It
+covers a large geographical area and may serve as an ISP (Internet
+Service Provider).(FastWeb)</p>
+</section>
+<section id="wan" class="slide level2">
+<h2>WAN</h2>
+<p><img data-src="images/wiredWorld.webp" width="700" /></p>
+<p>The world internet connection via fiber line, satellites links</p>
+</section></section>
+<section>
+<section id="the-osi-model" class="title-slide slide level1">
+<h1>The OSI model</h1>
+
+</section>
+<section id="osi-layers" class="slide level2">
+<h2>OSI Layers</h2>
+<p><img data-src="images/OSIModel.png" width="500" /></p>
+<p>Open System Interconnection model</p>
+</section>
+<section id="layer-1" class="slide level2">
+<h2>Layer 1</h2>
+<p>Physical Layer</p>
+<ul>
+<li><code>Telephone network modems</code>.</li>
+<li><code>IrDA</code> physical layer.</li>
+<li><code>USB</code> physical layer.</li>
+<li><code>EIA RS-232, EIA-422</code>….</li>
+<li><code>Ethernet cables and plugs</code> 10BASE-T, 10BASE …</li>
+<li>Varieties of <code>802.11 Wi-Fi</code> physical layers.</li>
+<li><code>DSL</code>.</li>
+<li><code>ISDN</code>.</li>
+</ul>
+</section>
+<section id="layer-1-devices" class="slide level2">
+<h2>Layer 1 devices</h2>
+<pre><code>Modems 
+Hubs </code></pre>
+</section>
+<section id="layer-2" class="slide level2">
+<h2>Layer 2</h2>
+<p>Data Link Protocols</p>
+<ul>
+<li><code>ARP</code> Address Resolution Protocol</li>
+<li><code>Ethernet</code><br />
+</li>
+<li><code>FDDI</code> Fiber Distributed Data Interface</li>
+<li><code>IEEE 802.2</code> MAC layers</li>
+<li><code>IEEE 802.11</code> wireless LAN</li>
+<li><code>I²C</code></li>
+<li><code>PPP</code> Point-to-Point Protocol</li>
+<li><code>Spanning Tree Protoco</code>l<br />
+</li>
+<li><code>Token ring</code></li>
+</ul>
+</section>
+<section id="layer-2-devices" class="slide level2">
+<h2>Layer 2 devices</h2>
+<pre><code>Switches 
+WAP (wireless access point) </code></pre>
+</section>
+<section id="layer-3" class="slide level2">
+<h2>Layer 3</h2>
+<p>Network Layer Protocols</p>
+<ul>
+<li><code>ICMP</code> Internet Control Message Protocol</li>
+<li><code>IPsec</code> Internet Protocol Security</li>
+<li><code>IPv4/IPv6</code> Internet Protocol</li>
+<li><code>IPX</code> Internetwork Packet Exchange</li>
+<li><code>RSMLT</code> Routing Information Protocol</li>
+</ul>
+</section>
+<section id="layer-4" class="slide level2">
+<h2>Layer 4</h2>
+<p>Transport Layer</p>
+<ul>
+<li><code>ATP</code> AppleTalk Transaction Protocol</li>
+<li><code>IL</code> Fibre Channel Protocol</li>
+<li><code>TCP</code> Transmission Control Protocol</li>
+<li><code>UDP</code> User Datagram Protocol</li>
+</ul>
+</section>
+<section id="layer-5" class="slide level2">
+<h2>Layer 5</h2>
+<p>Session Layer Protocol</p>
+<ul>
+<li><code>ADSP</code> AppleTalk Data Stream Protocol</li>
+<li><code>H.245</code> Call Control Protocol for Multimedia
+Communication</li>
+<li><code>NetBIOS</code> Network Basic Input Output System</li>
+<li><code>PAP</code> Password Authentication Protocol</li>
+<li><code>PPTP</code> Point-to-Point Tunneling Protocol</li>
+<li><code>RPC</code> Remote Procedure Call Protocol</li>
+<li><code>SMPP</code> Short Message Peer-to-Peer</li>
+<li><code>SOCKS</code> the SOCKS internet protocol</li>
+</ul>
+</section>
+<section id="layer-6" class="slide level2">
+<h2>Layer 6</h2>
+<p>Presentation Layer</p>
+<blockquote>
+<p>Is the lower layer for an application layer can usually manage</p>
+</blockquote>
+<ul>
+<li>Data conversion</li>
+<li>Character code translation</li>
+<li>Compression</li>
+<li>Encryption and Decryption</li>
+</ul>
+</section>
+<section id="layer-7" class="slide level2">
+<h2>Layer 7</h2>
+<p>Application Layer</p>
+<ul>
+<li><code>Atom</code>(rss) Publishing Protocol</li>
+<li><code>HTTP</code> HyperText Transfer Protocol</li>
+<li><code>LDAP</code> Lightweight Directory Access Protocol</li>
+<li><code>NFS</code> Network File System</li>
+<li><code>RPC</code> Remote Procedure Call</li>
+<li><code>SMB</code> Server Message Block</li>
+<li><code>SMTP</code> Simple Mail Transfer Protocol</li>
+<li><code>SSH</code> Secure Shell</li>
+<li><code>Tor</code> anonymity network</li>
+</ul>
+</section></section>
+<section>
+<section id="tcpip-model" class="title-slide slide level1">
+<h1>TCP/IP Model</h1>
+
+</section>
+<section id="dod-model" class="slide level2">
+<h2>DoD model</h2>
+<p>designed and developed by the Department of Defense (DoD) in the
+1960s and is based on standard protocols. It stands for Transmission
+Control Protocol/Internet Protocol.</p>
+</section>
+<section id="tcpip-layers" class="slide level2">
+<h2>TCP/IP Layers</h2>
+<p><img data-src="images/TCPipModel.png" width="500" /></p>
+</section>
+<section id="layer-3-1" class="slide level2">
+<h2>Layer 3</h2>
+<p>Internet Layer</p>
+<ul>
+<li><code>IP</code> Will deliver packets from the source to the
+destination using the IP addresses in the packet headers. IP has 2
+versions: IPv4 and IPv6.</li>
+<li><code>ICMP</code> Internet Control Message Protocol. It is
+encapsulated within IP datagrams.Provide information about network.</li>
+<li><code>ARP</code> Address Resolution Protocol. Its job is to find the
+hardware address of a host from a known IP address.</li>
+</ul>
+</section>
+<section id="layer-4-1" class="slide level2">
+<h2>Layer 4</h2>
+<p>Transport Layer</p>
+<ul>
+<li><code>TCP</code> Character-by-character transmission rather than
+separate packets. A starting point that establishes the connection, the
+whole transmission in byte order, and an ending point that closes the
+connection.</li>
+<li><code>UDP</code> Connections between receiving and sending hosts are
+not verified by UDP. Applications that transport little amounts of data
+use UDP</li>
+</ul>
+</section>
+<section id="layer-5-1" class="slide level2">
+<h2>Layer 5</h2>
+<p>Application Layer</p>
+<ul>
+<li><code>HTTP</code> and <code>HTTPS</code></li>
+<li><code>SSH</code></li>
+<li><code>FTP</code> and <code>sftp</code></li>
+<li><code>ldap</code> and <code>ldaps</code></li>
+<li>etc</li>
+</ul>
+</section>
+<section id="differences-i" class="slide level2">
+<h2>differences I</h2>
+<table>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TCP/IP</th>
+<th>OSI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TCP refers to Transmission Control Protocol.</td>
+<td>OSI refers to Open Systems Interconnection.</td>
+</tr>
+<tr class="even">
+<td>TCP/IP has 5 layers.</td>
+<td>OSI has 7 layers.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="differences-ii" class="slide level2">
+<h2>differences II</h2>
+<table>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TCP/IP</th>
+<th>OSI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TCP/IP is more reliable</td>
+<td>OSI is less reliable</td>
+</tr>
+<tr class="even">
+<td>TCP/IP does not have very strict boundaries.</td>
+<td>OSI has strict boundaries</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="differences-iii" class="slide level2">
+<h2>differences III</h2>
+<table>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TCP/IP</th>
+<th>OSI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TCP/IP follows connection-less a horizontal approach.</td>
+<td>OSI follows a vertical approach.</td>
+</tr>
+<tr class="even">
+<td>TCP/IP uses both session and presentation layer in the application
+layer itself.</td>
+<td>OSI uses different session and presentation layers.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="differences-iv" class="slide level2">
+<h2>differences IV</h2>
+<table>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TCP/IP</th>
+<th>OSI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TCP/IP developed protocols then model.</td>
+<td>OSI developed model then protocol.</td>
+</tr>
+<tr class="even">
+<td>Transport layer in TCP/IP does not provide assurance delivery of
+packets.</td>
+<td>In OSI model, transport layer provides assurance delivery of
+packets.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="differences-v" class="slide level2">
+<h2>differences V</h2>
+<table>
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>TCP/IP</th>
+<th>OSI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TCP/IP model network layer only provides connection less
+services.</td>
+<td>Connection less and connection-oriented both services are provided
+by the network layer in the OSI model.</td>
+</tr>
+<tr class="even">
+<td>Protocols cannot be replaced easily in TCP/IP model.</td>
+<td>Protocols are better covered and is easy to replace with the change
+in technology.</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section id="ip-addressing" class="title-slide slide level1">
+<h1>IP addressing</h1>
+
+</section>
+<section id="ip-addressing-1" class="slide level2">
+<h2>IP Addressing</h2>
+<p><img data-src="images/ip.png" width="500" /></p>
+<p>IP address is an address having information about how to reach a
+specific host, especially outside the LAN. An IP address is a 32 bit
+unique address having an address space of 2^32.</p>
+</section>
+<section id="classfull-ip" class="slide level2">
+<h2>Classfull IP</h2>
+<p><img data-src="images/ipClasses.png" width="800" /></p>
+</section>
+<section id="classfull-ip-ii" class="slide level2">
+<h2>CLassfull IP II</h2>
+<p><img data-src="images/ipClasseExt.png" width="800" /></p>
+</section>
+<section id="classless-routing" class="slide level2">
+<h2>Classless Routing</h2>
+<p>Classless Inter-Domain Routing (CIDR) is a method for allocating IP
+addresses and for IP routing. The Internet Engineering Task Force
+introduced CIDR in 1993 to replace the previous classful network
+addressing architecture on the Internet</p>
+</section>
+<section id="cidr-notation" class="slide level2">
+<h2>CIDR notation</h2>
+<p>CIDR notation is a compact representation of an IP address and its
+associated network mask. The notation was invented by Phil Karn in the
+1980 CIDR notation specifies an <code>IP address</code>, a slash
+(<code>'/'</code>) character, and a decimal number.</p>
+<blockquote>
+<p>The decimal number is the count of consecutive leading 1-bits (from
+left to right) in the network mask. The number can also be thought of as
+the width (in bits) of the network prefix.</p>
+</blockquote>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p>For example:</p>
+<p>198.51.100.14/24 represents the IPv4 address 198.51.100.14 and its
+associated network prefix 198.51.100.0, or equivalently, its
+<code>subnet mask 255.255.255.0</code>, which has
+<code>24 leading 1-bits</code>.</p>
+</section>
+<section id="subnet-mask" class="slide level2">
+<h2>subnet Mask</h2>
+<p>A subnet mask is a <code>bitmask</code> that encodes the prefix
+length associated with an IPv4 address or network in quad-dotted
+notation: 32 bits, starting with a number of 1-bits equal to the prefix
+length, ending with 0-bits, and encoded in four-part dotted-decimal
+format: <code>255.255.255.0</code>.</p>
+</section>
+<section id="iana" class="slide level2">
+<h2>IANA</h2>
+<p>The Internet Assigned Numbers Authority (IANA) issues to regional
+Internet registries (RIRs) large, short-prefix CIDR blocks. However, a
+/8 (with over sixteen million addresses) is the largest block IANA will
+allocate</p>
+</section>
+<section id="cidr-blocks" class="slide level2">
+<h2>CIDR Blocks</h2>
+<p><img data-src="images/CIDRBlocks.png" width="800" /></p>
+</section>
+<section id="private-network-blocks" class="slide level2">
+<h2>Private Network Blocks</h2>
+<p><img data-src="images/privateNetworkBlocks.png" width="800" /></p>
+</section></section>
+<section>
+<section id="tcpip" class="title-slide slide level1">
+<h1>TCP/IP</h1>
+
+</section>
+<section id="ip-header" class="slide level2">
+<h2>IP header</h2>
+<p><img data-src="images/ipHeader.gif" width="500" /></p>
+<p>The ip header has an header checksum that will ensure that the packet
+header is correctly formed. This will avoid for example “spoofing”
+pratices(different IP adress of the sender)</p>
+</section>
+<section id="protocol-handshake" class="slide level2">
+<h2>Protocol Handshake</h2>
+<p><img data-src="images/handshake-1.png" width="800" /></p>
+<p>The ending of the handshake will result in a properly crafted
+connection on a server designed port.</p>
+</section></section>
+<section>
+<section id="dns" class="title-slide slide level1">
+<h1>DNS</h1>
+
+</section>
+<section id="dns-1" class="slide level2">
+<h2>DNS</h2>
+<p>The Domain Name System (DNS) is the phonebook of the Internet. Humans
+access information online through domain names, like ifom.eu or
+unimi.it. Web browsers interact through Internet Protocol (IP)
+addresses. DNS translates domain names to IP addresses so browsers can
+load Internet resources.</p>
+</section>
+<section id="domain-tree" class="slide level2">
+<h2>Domain Tree</h2>
+<p><img data-src="images/dnsRoot.png" width="800" /></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
