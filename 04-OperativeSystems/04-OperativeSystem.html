@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Silvestro Di Pietro">
+  <title>Operative System</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+      #header-left {
+          position: absolute;
+          top: 2%;
+          left: 2%;
+      }
+      #header-right {
+          position: absolute;
+          top: 2%;
+          right: 2%;
+      }
+      #footer-left {
+          position: absolute;
+          bottom: 2%;
+          left: 2%;
+           left: 2%;
+      }
+  </style>
+  <div id="hidden" >
+      <div id="header">
+          <div id="header-left" class="alert alert-info" style="font-family: Arial, Helvetica, sans-serif;"><strong  >04-Operative Systems </strong><br /><em>Silvestro Di Pietro</em></div>
+          <div id="header-right" ><img align="middle" src="images/logounimi.png"><img align="middle" src="images/logoIfom.png"></div>
+          <div id="footer-left">
+          	<em class="badge badge-info" style="font-family: Arial, Helvetica, sans-serif;">
+          		Bioinformatic and Functional Genomics A.Y 2022-2023
+          	</em>
+          </div>
+      </div>
+  </div>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Operative System</h1>
+  <p class="author">Silvestro Di Pietro</p>
+  <p class="date">21/03/2023</p>
+</section>
+
+<section>
+<section id="definition" class="title-slide slide level1">
+<h1>Definition</h1>
+
+</section>
+<section id="wikipedia-definition" class="slide level2">
+<h2>Wikipedia Definition</h2>
+<p>An operating system (OS) is system software that manages computer
+hardware, software resources, and provides common services for computer
+programs.</p>
+</section>
+<section id="os" class="slide level2">
+<h2>OS</h2>
+<p><img data-src="images/OperativeSystemSchema.png" width="700" /></p>
+</section>
+<section id="functions" class="slide level2">
+<h2>Functions</h2>
+<ul>
+<li>Memory Management</li>
+<li>Processor Management</li>
+<li>Device Management</li>
+<li>File Management</li>
+<li>Network Management</li>
+<li>User Management</li>
+</ul>
+</section></section>
+<section>
+<section id="memory-management" class="title-slide slide level1">
+<h1>Memory Management</h1>
+
+</section>
+<section id="main-memory" class="slide level2">
+<h2>Main Memory</h2>
+<p>Main memory provides a fast storage that can be accessed directly by
+the CPU. For a program to be executed, it must in the main memory. An
+Operating System does the following activities for memory management</p>
+</section>
+<section id="tasks" class="slide level2">
+<h2>Tasks</h2>
+<ul>
+<li>Keeps tracks of primary memory, i.e., what part of it are in use by
+whom, what part are not in use.</li>
+<li>In multiprogramming, the OS decides which process will get memory
+when and how much.</li>
+<li>Allocates the memory when a process requests it to do so.</li>
+<li>De-allocates the memory when a process no longer needs it or has
+been terminated.</li>
+</ul>
+</section></section>
+<section>
+<section id="processor-management" class="title-slide slide level1">
+<h1>Processor Management</h1>
+
+</section>
+<section id="process-scheduling." class="slide level2">
+<h2>Process Scheduling.</h2>
+<ul>
+<li>Keeps tracks of processor and status of process. The program
+responsible for this task is known as traffic controller.</li>
+<li>Allocates the processor (CPU) to a process.</li>
+<li>De-allocates processor when a process is no longer required.</li>
+</ul>
+</section>
+<section id="process-management" class="slide level2">
+<h2>Process Management</h2>
+<p>A process is program or a fraction of a program that is loaded in
+main memory. A process needs certain resources including CPU time,
+Memory, Files, and I/O devices to accomplish its task. The process
+management component manages the multiple processes running
+simultaneously on the Operating System.</p>
+<blockquote>
+<p>A program in running state is called a <code>process</code>.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<p>OS is responsible for the following:</p>
+<ul>
+<li>Create, load, execute, suspend, resume, and terminate
+processes.</li>
+<li>Switch system among multiple processes in main memory.</li>
+<li>Provides communication mechanisms so that processes can communicate
+with each others</li>
+<li>Provides synchronization mechanisms to control concurrent access to
+shared data to keep shared data consistent.</li>
+<li>Allocate/de-allocate resources properly to prevent or avoid deadlock
+situation.</li>
+</ul>
+</section></section>
+<section>
+<section id="device-management" class="title-slide slide level1">
+<h1>Device Management</h1>
+
+</section>
+<section id="io-control" class="slide level2">
+<h2>I/O control</h2>
+<ul>
+<li>Keeps tracks of all devices. Program responsible for this task is
+known as the I/O controller.</li>
+<li>Decides which process gets the device when and for how much
+time.</li>
+<li>Allocates the device in the efficient way.</li>
+<li>De-allocates devices.</li>
+</ul>
+</section>
+<section id="abstraction-layer" class="slide level2">
+<h2>Abstraction Layer</h2>
+<p>I/O Device Management provides an abstract level of H/W devices and
+keep the details from applications to ensure proper use of devices, to
+prevent errors, and to provide users with convenient and efficient
+programming environment.</p>
+</section>
+<section id="io-tasks" class="slide level2">
+<h2>I/O Tasks</h2>
+<ul>
+<li>Hide the details of H/W devices</li>
+<li>Manage main memory for the devices using cache, buffer, and
+spooling</li>
+<li>Maintain and provide custom drivers for each device.</li>
+</ul>
+</section></section>
+<section>
+<section id="file-management" class="title-slide slide level1">
+<h1>File Management</h1>
+
+</section>
+<section id="file-system" class="slide level2">
+<h2>File System</h2>
+<p>A file system is normally organized into directories for easy
+navigation and usage. These directories may contain files and other
+directions.</p>
+</section>
+<section id="a-file" class="slide level2">
+<h2>A File</h2>
+<blockquote>
+<p>A files is a sequence of bits, bytes, lines or records whose meaning
+is defined by its creator and user.</p>
+</blockquote>
+</section>
+<section id="file-system-task" class="slide level2">
+<h2>File System Task</h2>
+<ul>
+<li>Keeps track of information, location, uses, status etc. The
+collective facilities are often known as <code>file system</code>.</li>
+<li>Decides who gets the resources.</li>
+<li>Allocates the resources.</li>
+<li>De-allocates the resources.</li>
+</ul>
+</section>
+<section id="directories" class="slide level2">
+<h2>Directories</h2>
+<p>Files are organized by the File System in a directory Tree</p>
+<figure>
+<img data-src="images/linuxFileStructure.png" width="700"
+alt="linux dir Tree" />
+<figcaption aria-hidden="true"><em>linux dir Tree</em></figcaption>
+</figure>
+</section>
+<section id="main-linux-dir" class="slide level2">
+<h2>Main Linux Dir</h2>
+<ul>
+<li><code>/bin</code> – binary or executable programs.</li>
+<li><code>/etc</code> – system configuration files.</li>
+<li><code>/home</code> – Users home directory. It is the default current
+directory.</li>
+<li><code>/opt</code> – optional or third-party software.</li>
+<li><code>/tmp</code> – temporary space, typically cleared on
+reboot.</li>
+<li><code>/usr</code> – User related programs.</li>
+<li><code>/var</code> – log files.</li>
+</ul>
+</section>
+<section id="fs-functions" class="slide level2">
+<h2>FS functions</h2>
+<ul>
+<li>File creation and deletion</li>
+<li>Directory creation and deletion</li>
+<li>The support of primitives for manipulating files and
+directories</li>
+<li>Mapping files onto secondary storage</li>
+</ul>
+</section></section>
+<section>
+<section id="network" class="title-slide slide level1">
+<h1>Network</h1>
+
+</section>
+<section id="network-management" class="slide level2">
+<h2>Network management</h2>
+<p>Is the process of managing and administering a computer network. A
+computer network is a collection of various types of computers connected
+with each other.</p>
+<blockquote>
+<p>Network management is the process of keeping your network healthy for
+an efficient communication between different computers.</p>
+</blockquote>
+</section>
+<section id="functions-1" class="slide level2">
+<h2>Functions</h2>
+<ul>
+<li>Network administration</li>
+<li>Network maintenance</li>
+<li>Network operation</li>
+<li>Network provisioning</li>
+<li>Network security</li>
+</ul>
+</section></section>
+<section>
+<section id="command-interpreter-system"
+class="title-slide slide level1">
+<h1>Command Interpreter System</h1>
+
+</section>
+<section id="shell" class="slide level2">
+<h2>Shell</h2>
+<p>The command interpreter is the primary interface between the user and
+the rest of the system. Command Interpreter System executes a user
+command by calling one or more number of underlying system programs or
+system calls.</p>
+<blockquote>
+<p>Command Interpreter System allows human users to interact with the
+Operating System and provides convenient programming environment to the
+users.</p>
+</blockquote>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
