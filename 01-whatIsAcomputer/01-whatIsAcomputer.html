@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Silvestro Di Pietro">
+  <title>Computers</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+      #header-left {
+          position: absolute;
+          top: 2%;
+          left: 2%;
+      }
+      #header-right {
+          position: absolute;
+          top: 2%;
+          right: 2%;
+      }
+      #footer-left {
+          position: absolute;
+          bottom: 2%;
+          left: 2%;
+           left: 2%;
+      }
+  </style>
+  <div id="hidden" >
+      <div id="header">
+          <div id="header-left" class="alert alert-info" style="font-family: Arial, Helvetica, sans-serif;"><strong  >01-What Is A Computer </strong><br /><em>Silvestro Di Pietro</em></div>
+          <div id="header-right" ><img align="middle" src="images/logounimi.png"><img align="middle" src="images/logoIfom.png"></div>
+          <div id="footer-left">
+          	<em class="badge badge-info" style="font-family: Arial, Helvetica, sans-serif;">
+          		Bioinformatic and Functional Genomics A.Y 2022-2023
+          	</em>
+          </div>
+      </div>
+  </div>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Computers</h1>
+  <p class="author">Silvestro Di Pietro</p>
+  <p class="date">15/03/2023</p>
+</section>
+
+<section>
+<section id="definition" class="title-slide slide level1">
+<h1>Definition</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>A computer is a machine that can be programmed to carry out sequences
+of arithmetic or logical operations (computation) automatically.</p>
+<div class="fragment">
+<blockquote>
+<p>Computer is a machine designed to solve problems automatically</p>
+</blockquote>
+</div>
+</section></section>
+<section>
+<section id="little-story" class="title-slide slide level1">
+<h1>Little story</h1>
+
+</section>
+<section id="little-story-1" class="slide level2">
+<h2>Little story</h2>
+<blockquote>
+<p>Antikythera mechanism (87 BC)</p>
+</blockquote>
+<div class="fragment">
+<p>The oldest known example of an analogue computer used to predict
+astronomical positions and eclipses decades in advance.</p>
+<figure>
+<img data-src="images/Anticitera.jpeg" width="200"
+alt="Antikythera mechanism" />
+<figcaption aria-hidden="true"><em>Antikythera
+mechanism</em></figcaption>
+</figure>
+</div>
+</section>
+<section id="little-story-2" class="slide level2">
+<h2>Little story</h2>
+<blockquote>
+<p>Jacquard machine (1804)</p>
+</blockquote>
+<div class="fragment">
+<p>Simplifies the process of manufacturing complex textiles he machine.
+Was controlled by a chain of punched cards;</p>
+<figure>
+<img
+data-src="images/Masson_Mills_WTM_10_Jacquard_Card_Cutter_5890.jpeg"
+width="200" alt="jacquard card puncher" />
+<figcaption aria-hidden="true"><em>jacquard card
+puncher</em></figcaption>
+</figure>
+</div>
+</section>
+<section id="little-story-3" class="slide level2">
+<h2>Little story</h2>
+<blockquote>
+<p>The differential engine (1820)</p>
+</blockquote>
+<div class="fragment">
+<p>A mechanical calculator designed to tabulate polynomial functions.
+Was first created by Charles Babbage and is considered the first moder
+computer.</p>
+<figure>
+<img data-src="images/Babbage_Difference_Engine.jpeg" width="200"
+alt="the differential engine" />
+<figcaption aria-hidden="true"><em>the differential
+engine</em></figcaption>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="analog-and-digital" class="title-slide slide level1">
+<h1>Analog and Digital</h1>
+
+</section>
+<section id="analog-computers" class="slide level2">
+<h2>Analog computers</h2>
+<div class="fragment">
+<p>Is a type of computer that uses the <strong>continuous</strong>
+variation aspect <code>(analog signals)</code> to model the problem
+being solved.</p>
+<figure>
+<img data-src="images/Bifnordennomenclature.jpeg" width="200"
+alt="norden bombsight" />
+<figcaption aria-hidden="true"><em>norden bombsight</em></figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="example-of-analog-computer">Example of analog computer</h3>
+<p>Here is tide predictor machine that, using a sequence of pulley, can
+predict <code>(compute)</code> tides. This is conceptually similar to
+the Antikythera mechanism.</p>
+<figure>
+<img data-src="images/ACTideMachine.jpeg" width="300"
+alt="tide machine" />
+<figcaption aria-hidden="true"><em>tide machine</em></figcaption>
+</figure>
+</section>
+<section id="digital-computers" class="slide level2">
+<h2>Digital computers</h2>
+<div class="fragment">
+<p>Is a type of computer that uses the discrete form
+<code>(discrete inputs)</code> to model the problem being solved.</p>
+<figure>
+<img data-src="images/BabbageDifferentialMachine.webp" width="300"
+alt="differential engine" />
+<figcaption aria-hidden="true"><em>differential engine</em></figcaption>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="example-of-digital-computer">Example of Digital computer</h3>
+<p>The Lehmer sieve in 1926 was made using chains of varying length,
+with rods at appropriate points in the chains. As the chains turned, the
+rods would close electrical switches, and when all the switches were
+closed simultaneously a solution had been found</p>
+<figure>
+<img data-src="images/Lehmer_sieve.jpeg" width="200"
+alt="Lehmer sieve" />
+<figcaption aria-hidden="true"><em>Lehmer sieve</em></figcaption>
+</figure>
+</section></section>
+<section>
+<section id="the-computer-science" class="title-slide slide level1">
+<h1>The computer science</h1>
+
+</section>
+<section id="hilbert-problems1900" class="slide level2">
+<h2>Hilbert Problems(1900)</h2>
+<figure>
+<img data-src="images/Hilbert.jpeg" width="200" alt="David Hilbert" />
+<figcaption aria-hidden="true"><em>David Hilbert</em></figcaption>
+</figure>
+<p>Among the 23 problems stated by Hilbert we summarize them in three
+questions and those were not just questions in mathematics; they were
+questions about mathematics itself</p>
+</section>
+<section id="completeness-of-math" class="slide level2">
+<h2>Completeness of Math</h2>
+<div class="fragment">
+<ol type="1">
+<li><strong>Is mathematics complete</strong>? That is, can every
+mathematical statement be proved or disproved from a given finite set of
+axioms?</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li><strong>Is mathematics consistent</strong>? In other words, can only
+the true statements be proved?</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li><strong>Is every statement in mathematics decidable</strong>? There
+is a <strong>definite procedure</strong> that can be applied to every
+statement that will tell us in finite time if the statement is true or
+false?</li>
+</ol>
+</div>
+</section>
+<section id="kurt-gödel" class="slide level2">
+<h2>Kurt Gödel</h2>
+<p>Kurt Gödel in 1930 answered to the first two stating shortly that if
+the answer to question 2 above is “yes” (i.e., mathematics is
+consistent), then the answer to question 1 (is mathematics complete?)
+has to be “no.”</p>
+<figure>
+<img data-src="images/Kurt_gödel.jpeg" width="200" alt="Kurt Gödel" />
+<figcaption aria-hidden="true"><em>Kurt Gödel</em></figcaption>
+</figure>
+</section>
+<section id="entscheidungsproblem" class="slide level2">
+<h2>Entscheidungsproblem</h2>
+<p>The last question is known by its German name as the
+Entscheidungsproblem (“decision problem”), and goes back to the
+seventeenth-century mathematician <strong>Gottfried Leibniz.
+Leibniz</strong> actually built his own calculating machine, and
+believed that humans could eventually build a machine that could
+determine the truth or falsity of any mathematical statement.</p>
+</section>
+<section id="alan-turing" class="slide level2">
+<h2>Alan Turing</h2>
+<p><img data-src="images/AlanTuring.png" width="150" /></p>
+<p>The decision problem was answered by Alan Turing in 1935 and the
+answer was no, (the halting problem) but doing this he create the
+computer concept as we know it today.</p>
+<div class="fragment">
+<p><em>Alan turing did this when he was twenty-three-year-old as
+graduated student under the logician Max Newman</em></p>
+</div>
+</section>
+<section id="leibniz-legacy" class="slide level2">
+<h2>Leibniz Legacy</h2>
+<p>Following the intuition of Leibniz of more than two centuries
+earlier, Turing formulated his definition by thinking about a powerful
+calculating machine that could not only perform arithmetic but also
+could <code>manipulate symbols</code> in order to prove mathematical
+statements.</p>
+</section>
+<section id="thought-machine" class="slide level2">
+<h2>Thought Machine</h2>
+<p>By thinking about how humans might calculate, he constructed a
+<strong>mental design</strong> of such a machine</p>
+<div class="fragment">
+<blockquote>
+<p><code>The Turing machine turned out to be a blueprint for the invention of the electronic programmable computer.</code></p>
+</blockquote>
+</div>
+</section>
+<section id="turing-machine" class="slide level2">
+<h2>Turing Machine</h2>
+<p><img data-src="images/TuringMachine.png" width="600" /></p>
+<div class="fragment">
+<p>is composed by a <code>tape</code> where an <code>head</code> can
+scroll in any direction and can read/write symbols on it. The
+<code>head</code> can use a finite control made up with
+<strong>rules</strong> eg: if <code>tape cell</code> read is (x) then
+move to next <code>tape cell</code> and write (y) …</p>
+</div>
+</section>
+<section id="limits" class="slide level2">
+<h2>Limits!</h2>
+<div class="fragment">
+<ol type="1">
+<li>This thought machine has set the definition of <strong><em>definite
+procedure,</em></strong> fixing an ill-defined notion,</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Has blueprinted and paved the way to modern computers</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Has given bird to the <em>computer science</em>, exploiting the
+<em>halting problem</em> and demonstrating that
+<code>there are limits to what can be computed</code>.</li>
+</ol>
+</div>
+</section>
+<section id="von-neumann" class="slide level2">
+<h2>von Neumann</h2>
+<p><img data-src="images/John-von-Neumann-and-the-007.png"
+width="300" /></p>
+<p>The <strong>von Neumann architecture</strong> consists of a
+<code>random access memory</code> (RAM) that stores both program
+instructions and data, and a central <code>processing unit</code> (CPU)
+that fetches instructions and data from memory and executes the
+instructions.</p>
+</section></section>
+<section>
+<section id="cellular-automaton" class="title-slide slide level1">
+<h1>Cellular Automaton</h1>
+
+</section>
+<section id="a-forward-step" class="slide level2">
+<h2>A forward step</h2>
+<figure>
+<img data-src="images/Stanislaw_Ulam.png" width="100"
+alt="Stanislaw Ulam" />
+<figcaption aria-hidden="true"><em>Stanislaw Ulam</em></figcaption>
+</figure>
+<p>von Newman working in Los Alamos with Stanislaw Ulam start thinking
+about a different architecture of computer mainly to solve fluid motions
+problems</p>
+</section>
+<section id="definition-1" class="slide level2">
+<h2>Definition</h2>
+<p>A cellular automaton consists of a regular grid of cells, each in one
+of a finite number of states, such as on and off. An initial state
+<code>(time t = 0)</code> is selected by assigning a state for each
+cell. A new generation is created <code>(t = t+1)</code>, according to
+some <strong>rules</strong> that determines the new
+<strong>state</strong> of each cell in terms of the current state of the
+cell and the states of the cells in its neighborhood on grid.</p>
+</section>
+<section id="cellular-grids" class="slide level2">
+<h2>cellular grids</h2>
+<figure>
+<img data-src="images/CA-Moore.png" width="200" alt="Moore" />
+<figcaption aria-hidden="true"><em>Moore</em></figcaption>
+</figure>
+<figure>
+<img data-src="images/CA-von-Neumann.png" width="200"
+alt="Von Newman" />
+<figcaption aria-hidden="true"><em>Von Newman</em></figcaption>
+</figure>
+</section>
+<section id="conways-game-of-life" class="slide level2">
+<h2>Conway’s Game of Life</h2>
+<p><img data-src="images/John_Conway.png" width="150" /></p>
+<ol type="1">
+<li>Any live cell with two or three live neighbours survives.</li>
+<li>Any dead cell with three live neighbours becomes a live cell.</li>
+<li>All other live cells die in the next generation. Similarly, all
+other dead cells stay dead.</li>
+</ol>
+</section>
+<section id="guns-and-glider" class="slide level2">
+<h2>Guns and Glider</h2>
+<p><img data-src="images/Gospers_glider_gun.gif" width="250" /></p>
+<p><img data-src="images/Stable_puffer_animation.gif"
+width="1800" /></p>
+</section>
+<section id="wolfram-automaton" class="slide level2">
+<h2>Wolfram Automaton</h2>
+<figure>
+<img data-src="images/Steven_Wolfram.png" width="250"
+alt="Steven Wolfram" />
+<figcaption aria-hidden="true"><em>Steven Wolfram</em></figcaption>
+</figure>
+<p>Steven Wolfram simplified the concept of cellular automata using just
+8 bits to create 256 possibile rules, and discover this:</p>
+<p><img data-src="images/Rule_110.png" width="450" /></p>
+</section>
+<section id="rule-110" class="slide level2">
+<h2>Rule 110</h2>
+<p><img data-src="images/One-d-cellular-automaton-rule-110.gif"
+width="750" /></p>
+</section>
+<section id="automaton-256-rules" class="slide level2">
+<h2>Automaton 256 rules</h2>
+<p><img data-src="images/wolfram6.gif" width="650" /></p>
+</section>
+<section id="universal-computer" class="slide level2">
+<h2>Universal computer</h2>
+<p>A universal computer in a cellular automaton is a system that can
+compute anything that a Turing machine can compute (another term for
+this is Turing-complete). A cellular automaton in which such a system
+exists is called universal. A universal computer may be either infinite
+or finite, but when combined with a universal constructor, it is assumed
+to be finite.</p>
+</section>
+<section id="chaos-and-order" class="slide level2">
+<h2>Chaos and Order</h2>
+<p><code>Rule 110</code> was proved to be an <strong>Universal
+Computer</strong> but <code>Rule 30</code> seem to be hitting the edge
+from Chaos and Order in the field of complexity, leading to an idea
+of</p>
+<p><img data-src="images/Rule30-256-rows.png" width="650" /></p>
+</section>
+<section id="complexity" class="slide level2">
+<h2>Complexity</h2>
+<p><img data-src="images/1280px-Textile_cone.jpeg" width="650" /></p>
+</section>
+<section id="new-kind-of-science" class="slide level2">
+<h2>New Kind Of Science</h2>
+<ol type="1">
+<li>The proper way to think about processes in nature is that they are
+computing.</li>
+<li>Since even very simple rules can support universal computation, the
+ability to support universal computation is very common in nature.</li>
+</ol>
+</section>
+<section id="new-kind-of-science-1" class="slide level2">
+<h2>New Kind Of Science</h2>
+<ol start="3" type="1">
+<li>Universal computation is an upper limit on the complexity of
+computations in nature. That is, no natural system or process can
+produce behavior that is “noncomputable.”</li>
+<li>The computations done by different processes in nature are almost
+always equivalent in sophistication.</li>
+</ol>
+</section></section>
+<section>
+<section id="conclusion" class="title-slide slide level1">
+<h1>Conclusion</h1>
+
+</section>
+<section class="slide level2">
+
+<p><img data-src="images/a_bunch_of_rocks1.png" width="500" /></p>
+</section>
+<section class="slide level2">
+
+<p><img data-src="images/a_bunch_of_rocks2.png" width="550" /></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
