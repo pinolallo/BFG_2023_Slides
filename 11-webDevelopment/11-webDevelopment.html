@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Silvestro Di Pietro">
+  <title>Web Development</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js//dist/theme/sky.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style type="text/css">
+      #header-left {
+          position: absolute;
+          top: 2%;
+          left: 2%;
+      }
+      #header-right {
+          position: absolute;
+          top: 2%;
+          right: 2%;
+      }
+      #footer-left {
+          position: absolute;
+          bottom: 2%;
+          left: 2%;
+           left: 2%;
+      }
+  </style>
+  <div id="hidden" >
+      <div id="header">
+          <div id="header-left" class="alert alert-info" style="font-family: Arial, Helvetica, sans-serif;"><strong  >11-Web Development </strong><br /><em>Silvestro Di Pietro</em></div>
+          <div id="header-right" ><img align="middle" src="images/logounimi.png"><img align="middle" src="images/logoIfom.png"></div>
+          <div id="footer-left">
+          	<em class="badge badge-info" style="font-family: Arial, Helvetica, sans-serif;">
+          		Bioinformatic and Functional Genomics A.Y 2022-2023
+          	</em>
+          </div>
+      </div>
+  </div>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Web Development</h1>
+  <p class="author">Silvestro Di Pietro</p>
+  <p class="date">6/10/2023</p>
+</section>
+
+<section>
+<section id="web" class="title-slide slide level1">
+<h1>Web</h1>
+
+</section>
+<section id="tcpip-layer-5-protocol" class="slide level2">
+<h2>TCP/IP layer 5 protocol</h2>
+<p><img data-src="images/TCPipModel.png" width="500" /></p>
+<p><em>https://github.com/pinolallo/BFG_2023_Slides/blob/main/08-network/08-network_a.md#tcpip-layers</em></p>
+</section>
+<section id="network-is-a-railroad" class="slide level2">
+<h2>network is a railroad</h2>
+<p><img data-src="images/internet-services.png" width="500" /></p>
+</section>
+<section id="web-1" class="slide level2">
+<h2>Web</h2>
+<p>Common Services</p>
+<ul>
+<li><code>http</code> and <code>https</code> (the web pages)</li>
+<li><code>email</code> (the email system)</li>
+<li><code>ftp</code> (the File Transfer Protocol)</li>
+<li>…</li>
+</ul>
+</section></section>
+<section>
+<section id="http" class="title-slide slide level1">
+<h1>http</h1>
+
+</section>
+<section id="w3-www" class="slide level2">
+<h2>W3 ( WWW )</h2>
+<p>The WorldWideWeb (W3) is a wide-area hypermedia information retrieval
+initiative aiming to give universal access to a large universe of
+documents.</p>
+<p>here the link of the first web site
+<code>https://info.cern.ch/hypertext/WWW/TheProject.html</code></p>
+</section>
+<section id="web-server" class="slide level2">
+<h2>Web server</h2>
+<p><img data-src="images/webServer.png" width="700" /> The web server in
+it’s simple form is just a file server that will transmits over the
+tpc/ip network a file requested by a browser using an
+<code>url</code></p>
+</section>
+<section id="url" class="slide level2">
+<h2>URL</h2>
+<p>URL is for <code>Uniform Resource Locator</code> is a part of the URI
+<code>Uniform Resource Identifier</code></p>
+<p>URIs may be used to identify anything, including real-world objects,
+such as people and places, concepts, or information resources such as
+web pages and books.</p>
+</section>
+<section id="uri-structure" class="slide level2">
+<h2>URI structure</h2>
+<blockquote>
+<p>schematics of an uri</p>
+</blockquote>
+<p><img data-src="images/urlScheme.png" width="1000" /> <img
+data-src="images/uriExample1.png" width="7000" /> <img
+data-src="images/uriExample2.png" width="7000" /></p>
+</section>
+<section id="file-types-served-by-a-web-server" class="slide level2">
+<h2>File types served by a web server</h2>
+<p>Using an uri you can request a file such as:</p>
+<ul>
+<li><code>html</code></li>
+<li><code>images</code>
+<ul>
+<li>jpeg gif png webP svg ..</li>
+</ul></li>
+<li><code>xml</code></li>
+<li><code>json</code></li>
+</ul>
+</section></section>
+<section>
+<section id="html" class="title-slide slide level1">
+<h1>html</h1>
+
+</section>
+<section id="markup-language" class="slide level2">
+<h2>markup language</h2>
+<blockquote>
+<p>HTML is the standard markup language for Web pages tha will be
+rendered by a rendering engine</p>
+</blockquote>
+<pre><code>    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;This is a Heading&lt;/h1&gt;
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;
+        &lt;/body&gt;
+   &lt;/html&gt;</code></pre>
+</section>
+<section id="rendering" class="slide level2">
+<h2>rendering</h2>
+<p>Rendering is a process that turns website code into pages users can
+see/use. The process is made by a rendering engine inside a web
+browser</p>
+<p><img data-src="images/650px-HTML-rendering-tree.png"
+width="600" /></p>
+</section>
+<section id="html-file-parts" class="slide level2">
+<h2>html file parts</h2>
+<ul>
+<li>html (the html file)</li>
+<li>head (the infos about the html file)</li>
+<li>body the displayed part of the html file</li>
+</ul>
+</section>
+<section id="html-basics" class="slide level2">
+<h2>html Basics</h2>
+<ul>
+<li>the tag
+<ul>
+<li>&lt;tag&gt;things inside a tag&lt;/tag&gt; (the &lt;/&gt; close the
+tag)</li>
+</ul></li>
+<li>self closed tag
+<ul>
+<li>&lt;tag /&gt; (nothing inside)</li>
+</ul></li>
+</ul>
+<p>Please check this page for many examples
+*<em>https://www.w3schools.com/html/html_examples.asp</em></p>
+</section></section>
+<section>
+<section id="xml" class="title-slide slide level1">
+<h1>XML</h1>
+
+</section>
+<section id="xml-1" class="slide level2">
+<h2>XML</h2>
+<p><code>Extensible Markup Language</code> (XML) is a markup language
+and file format for storing, transmitting, and reconstructing arbitrary
+data. https://en.wikipedia.org/wiki/XML <code>Xml</code> use the same
+markup structure of <code>HTML</code> using tags: You can define you
+element ad fill with info</p>
+</section>
+<section id="xml-dom" class="slide level2">
+<h2>XML DOM</h2>
+<p>A browser will transform the <code>HTML</code> into a tree structure
+inside an xml <img data-src="images/650px-HTML-rendering-tree.png"
+width="700" /></p>
+</section></section>
+<section>
+<section id="web-apps" class="title-slide slide level1">
+<h1>Web apps</h1>
+
+</section>
+<section id="structure" class="slide level2">
+<h2>Structure</h2>
+<p>Web is not just static pages, can be dynamically coded</p>
+<p><img data-src="images/webApp.png" width="500" /></p>
+</section>
+<section id="requests" class="slide level2">
+<h2>REQUESTS</h2>
+<p>the requests to a server from browser:</p>
+<ul>
+<li><code>POST</code></li>
+<li><code>GET</code></li>
+<li>PUT</li>
+<li><code>HEAD</code></li>
+<li>DELETE</li>
+<li>PATCH</li>
+<li>OPTIONS</li>
+<li>CONNECT</li>
+<li>TRACE</li>
+</ul>
+</section>
+<section id="the-post-method" class="slide level2">
+<h2>The POST Method</h2>
+<p>POST is used to send data to a server to create/update a resource.
+Some notes on POST requests:</p>
+<ul>
+<li>POST requests are never cached</li>
+<li>POST requests do not remain in the browser history</li>
+<li>POST requests cannot be bookmarked</li>
+<li>POST requests have no restrictions on data length</li>
+</ul>
+</section>
+<section id="the-get-method" class="slide level2">
+<h2>The GET Method</h2>
+GET is used to request data from a specified resource.
+<pre>/test/demo_form.php?name1=value1&name2=value2</pre>
+<ul>
+<li>GET requests can be cached</li>
+<li>GET requests remain in the browser history</li>
+<li>GET requests can be bookmarked</li>
+<li>GET requests should never be used with sensitive data</li>
+<li>GET requests have length restrictions</li>
+<li>GET requests are only used to request data (not modify)</li>
+</ul>
+</section>
+<section id="the-head-method" class="slide level2">
+<h2>The HEAD Method</h2>
+<p>HEAD is almost identical to GET, but without the response body. In
+other words, if GET /users returns a list of users, then HEAD /users
+will make the same request but will not return the list of users. HEAD
+requests are useful for checking what a GET request will return before
+actually making a GET request - like before downloading a large file or
+response body.</p>
+</section>
+<section id="back-and-front" class="slide level2">
+<h2>Back and front</h2>
+<p><img data-src="images/backEndFrontEnd.png" width="700" /></p>
+</section></section>
+<section>
+<section id="frontend" class="title-slide slide level1">
+<h1>FrontEnd</h1>
+
+</section>
+<section id="basics" class="slide level2">
+<h2>BASICS</h2>
+<p>Front end (User Interface) is managed by <code>HTML</code>
+<code>CSS</code> <code>JAVASCRIPT</code></p>
+<p>THE head of html wiLL include also the <code>CSS</code> files and the
+<code>Javascript</code> files</p>
+</section>
+<section id="css" class="slide level2">
+<h2>CSS</h2>
+<ul>
+<li>CSS stands for Cascading Style Sheets</li>
+<li>CSS describes how HTML elements are to be displayed on screen,
+paper, or in other media</li>
+<li>CSS saves a lot of work. It can control the layout of multiple web
+pages all at once</li>
+<li>External stylesheets are stored in CSS files</li>
+</ul>
+<p><em>https://www.w3schools.com/css/</em></p>
+</section>
+<section id="javascript" class="slide level2">
+<h2>JAVASCRIPT</h2>
+<ul>
+<li>JavaScript is the world’s most popular programming language.</li>
+<li>JavaScript is the programming language of the Web.</li>
+<li>JavaScript is easy to learn.</li>
+</ul>
+<p><em>https://www.w3schools.com/js/default.asp</em></p>
+</section></section>
+<section>
+<section id="backend" class="title-slide slide level1">
+<h1>BackEnd</h1>
+
+</section>
+<section id="web-2" class="slide level2">
+<h2>WEB</h2>
+<ul>
+<li>DATABASE interface</li>
+<li>request query management</li>
+<li>security</li>
+<li>html response</li>
+</ul>
+</section>
+<section id="api" class="slide level2">
+<h2>API</h2>
+<ul>
+<li>DATABASE interface</li>
+<li>request query management</li>
+<li>security</li>
+<li>json / xml response</li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js//plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
